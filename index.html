@@ -1,177 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Gallery</title>
-    <style>
-        /* Global styles */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-        body { background: #f4f4f4; color: #333; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Professional Gallery</title>
+<style>
+/* Global Styles */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Arial', sans-serif; }
+body { background:#f4f4f4; color:#333; }
 
-        /* Navigation */
-        nav {
-            display: flex; justify-content: space-around; align-items: center;
-            background: #1f2937; padding: 15px 0; position: sticky; top:0; z-index:100;
-        }
-        nav a { color: #fff; font-weight: bold; padding: 10px 15px; transition: all 0.3s; }
-        nav a:hover { color: #FFD700; transform: scale(1.1); }
+/* Navigation */
+nav {
+    display:flex; justify-content:center; align-items:center;
+    background:#1f2937; padding:15px 0; position:sticky; top:0; z-index:100;
+}
+nav a {
+    color:#fff; font-weight:bold; margin:0 15px;
+    padding:10px 15px; transition: all 0.3s;
+}
+nav a:hover { color:#FFD700; transform: scale(1.1); }
 
-        /* Header/Home */
-        header {
-            text-align: center; padding: 80px 20px;
-            background: linear-gradient(to right, #4CAF50, #1f2937); color: #fff;
-        }
-        header h1 { font-size: 3em; margin-bottom: 10px; }
-        header p { font-size: 1.3em; }
+/* Header */
+header {
+    text-align:center; padding:100px 20px;
+    background: linear-gradient(to right, #4CAF50, #1f2937);
+    color:#fff;
+}
+header h1 { font-size:3em; margin-bottom:15px; }
+header p { font-size:1.3em; }
 
-        /* Section Titles */
-        section h2 { text-align: center; margin: 50px 0 30px; font-size: 2em; color: #1f2937; }
+/* Section Titles */
+section h2 {
+    text-align:center; margin:50px 0 30px; font-size:2em; color:#1f2937;
+}
 
-        /* Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; padding: 0 20px 50px;
-        }
-        .gallery img {
-            width: 100%; border-radius: 10px; cursor: pointer;
-            transition: transform 0.3s, border 0.3s; border: 3px solid #333;
-        }
-        .gallery img:hover { transform: scale(1.05); border-color: #FFD700; }
+/* Gallery */
+.gallery {
+    display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap:20px; padding:0 20px 50px;
+}
+.gallery img {
+    width:100%; border-radius:10px; cursor:pointer;
+    border:3px solid #333; transition: transform 0.3s, border 0.3s;
+}
+.gallery img:hover { transform: scale(1.05); border-color:#FFD700; }
 
-        /* Lightbox */
-        #lightbox {
-            display: none; position: fixed; top:0; left:0; width:100%; height:100%;
-            background: rgba(0,0,0,0.9); justify-content: center; align-items: center; z-index:200;
-        }
-        #lightbox img { max-width:90%; max-height:80%; border-radius:10px; }
-        #lightbox span { position: absolute; top: 20px; right: 40px; color: #fff; font-size: 3em; cursor:pointer; }
+/* Lightbox */
+#lightbox {
+    display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+    background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:200;
+}
+#lightbox img { max-width:90%; max-height:80%; border-radius:10px; }
+#lightbox span {
+    position:absolute; top:20px; right:40px; color:#fff;
+    font-size:3em; cursor:pointer;
+}
 
-        /* About */
-        #about { max-width: 800px; margin: 0 auto 60px; text-align: center; padding: 0 20px; line-height: 1.6; font-size: 1.1em; }
+/* About */
+#about {
+    max-width:800px; margin:0 auto 60px; text-align:center;
+    padding:0 20px; line-height:1.6; font-size:1.1em;
+}
 
-        /* Footer */
-        footer { text-align:center; padding:20px; background:#1f2937; color:#fff; }
+/* Footer */
+footer { text-align:center; padding:20px; background:#1f2937; color:#fff; }
 
-        @media(max-width:600px){
-            header h1{ font-size:2em; }
-            nav{ flex-direction:column; }
-        }
-    </style>
+/* Responsive */
+@media(max-width:600px){
+    header h1{ font-size:2em; }
+    nav{ flex-direction:column; }
+    nav a{ margin:5px 0; }
+}
+</style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-    </nav>
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+</nav>
 
-    <!-- Home -->
-    <header id="home">
-        <h1>Welcome to My Professional Gallery</h1>
-        <p>Showcasing Guns, Cars, Bikes, and Aircraft</p>
-    </header>
+<!-- Home -->
+<header id="home">
+    <h1>Welcome to My Professional Gallery</h1>
+    <p>Showcasing Guns, Cars, Bikes, and Aircraft</p>
+</header>
 
-    <!-- Gallery -->
-    <section id="gallery">
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <!-- Guns -->
-              <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 1">
-            <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 2">
-            <!-- Cars -->
-            <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 1">
-            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 2">
-            <!-- Bikes -->
-            <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 1">
-            <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 2">
-            <!-- Aircraft -->
-          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 1">
-            <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 2">
-            <!-- Guns (8 images) -->
-<img src="https://images.unsplash.com/photo-1607032850987-40f0f31f6dc0?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 1">
-<img src="https://images.unsplash.com/photo-1595883760891-d41b1f26fa18?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 2">
-<img src="https://images.unsplash.com/photo-1595899766427-7a2d87eb4371?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 3">
-<img src="https://images.unsplash.com/photo-1595433707802-6c504f1b3fa7?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 4">
-<img src="https://images.unsplash.com/photo-1603133872877-2b874f6d0b7d?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 5">
-<img src="https://images.unsplash.com/photo-1580795475131-51b7d2921fc1?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 6">
-<img src="https://images.unsplash.com/photo-1575508539241-1fdbad48969c?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 7">
-<img src="https://images.unsplash.com/photo-1572972175224-b9d30fcf7c64?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 8">
+<!-- Gallery -->
+<section id="gallery">
+<h2>Gallery</h2>
+<div class="gallery">
+    <!-- Guns -->
+    <img src="https://images.unsplash.com/photo-1607032850987-40f0f31f6dc0?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 1">
+    <img src="https://images.unsplash.com/photo-1595883760891-d41b1f26fa18?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 2">
+    <img src="https://images.unsplash.com/photo-1595899766427-7a2d87eb4371?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 3">
+    <img src="https://images.unsplash.com/photo-1595433707802-6c504f1b3fa7?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 4">
+    <img src="https://images.unsplash.com/photo-1603133872877-2b874f6d0b7d?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 5">
+    <img src="https://images.unsplash.com/photo-1580795475131-51b7d2921fc1?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 6">
+    <img src="https://images.unsplash.com/photo-1575508539241-1fdbad48969c?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 7">
+    <img src="https://images.unsplash.com/photo-1572972175224-b9d30fcf7c64?auto=format&fit=crop&w=400&h=250&q=80" alt="Gun 8">
 
-<!-- Cars (8 images) -->
-<img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 1">
-<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 2">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 3">
-<img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f2e7?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 4">
-<img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 5">
-<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 6">
-<img src="https://images.unsplash.com/photo-1589394812885-dfe22854647b?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 7">
-<img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 8">
+    <!-- Cars -->
+    <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 1">
+    <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 2">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 3">
+    <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f2e7?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 4">
+    <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 5">
+    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 6">
+    <img src="https://images.unsplash.com/photo-1589394812885-dfe22854647b?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 7">
+    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=400&h=250&q=80" alt="Car 8">
 
-<!-- Bikes (8 images) -->
-<img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 1">
-<img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 2">
-<img src="https://images.unsplash.com/photo-1519669556873-7aafeec6d865?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 3">
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 4">
-<img src="https://images.unsplash.com/photo-1525060529546-35d1ee06aa57?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 5">
-<img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 6">
-<img src="https://images.unsplash.com/photo-1558980394-0e5fabb2071b?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 7">
-<img src="https://images.unsplash.com/photo-1568084254-6c6d6f8d1f64?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 8">
+    <!-- Bikes -->
+    <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 1">
+    <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 2">
+    <img src="https://images.unsplash.com/photo-1519669556873-7aafeec6d865?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 3">
+    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 4">
+    <img src="https://images.unsplash.com/photo-1525060529546-35d1ee06aa57?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 5">
+    <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 6">
+    <img src="https://images.unsplash.com/photo-1558980394-0e5fabb2071b?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 7">
+    <img src="https://images.unsplash.com/photo-1568084254-6c6d6f8d1f64?auto=format&fit=crop&w=400&h=250&q=80" alt="Bike 8">
 
-<!-- Aircraft / F16 (8 images) -->
-<img src="https://images.unsplash.com/photo-1595680565553-5f5a30ec5121?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 1">
-<img src="https://images.unsplash.com/photo-1581091012184-20378d9a338c?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 2">
-<img src="https://images.unsplash.com/photo-1595680565562-4df6e41e64e3?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 3">
-<img src="https://images.unsplash.com/photo-1567496942475-37c45a17d1c4?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 4">
-<img src="https://images.unsplash.com/photo-1570933470586-9e962b2f7f3f?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 5">
-<img src="https://images.unsplash.com/photo-1528991989438-79c9b67df6f4?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 6">
-<img src="https://images.unsplash.com/photo-1605840490563-1f631bc9a618?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 7">
-<img src="https://images.unsplash.com/photo-1584540237403-ffbc0b3a7b8c?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 8">
+    <!-- Aircraft / F16 -->
+    <img src="https://images.unsplash.com/photo-1595680565553-5f5a30ec5121?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 1">
+    <img src="https://images.unsplash.com/photo-1581091012184-20378d9a338c?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 2">
+    <img src="https://images.unsplash.com/photo-1595680565562-4df6e41e64e3?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 3">
+    <img src="https://images.unsplash.com/photo-1567496942475-37c45a17d1c4?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 4">
+    <img src="https://images.unsplash.com/photo-1570933470586-9e962b2f7f3f?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 5">
+    <img src="https://images.unsplash.com/photo-1528991989438-79c9b67df6f4?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 6">
+    <img src="https://images.unsplash.com/photo-1605840490563-1f631bc9a618?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 7">
+    <img src="https://images.unsplash.com/photo-1584540237403-ffbc0b3a7b8c?auto=format&fit=crop&w=400&h=250&q=80" alt="F16 8">
+</div>
+</section>
 
-        </div>
-    </section>
+<!-- Lightbox -->
+<div id="lightbox">
+    <span onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="">
+</div>
 
-    <!-- Lightbox -->
-    <div id="lightbox">
-        <span onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-img" src="">
-    </div>
+<!-- About -->
+<section id="about">
+<h2>About Me</h2>
+<p>
+Hi! I'm a passionate enthusiast of guns, cars, sports bikes, and military aircraft. 
+This website showcases my personal collection of images and interests. I enjoy high-speed rides, mechanical engineering, 
+and exploring modern military technology. My goal is to share my passions in a professional and visually appealing way.
+</p>
+</section>
 
-    <!-- About -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hi! I'm a passionate enthusiast of guns, cars, sports bikes, and military aircraft. 
-            This website showcases my personal collection of images and interests. I enjoy high-speed rides, mechanical engineering, 
-            and exploring modern military technology. My goal is to share my passions in a professional and visually appealing way.
-        </p>
-    </section>
+<!-- Footer -->
+<footer>
+&copy; 2025 My Professional Gallery. All rights reserved.
+</footer>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2025 My Professional Gallery. All rights reserved.
-    </footer>
+<!-- JS for Lightbox -->
+<script>
+const galleryImages = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
 
-    <!-- JS for Lightbox -->
-    <script>
-        const galleryImages = document.querySelectorAll('.gallery img');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
+galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
 
-        galleryImages.forEach(img => {
-            img.addEventListener('click', () => {
-                lightbox.style.display = 'flex';
-                lightboxImg.src = img.src;
-            });
-        });
-
-        function closeLightbox() {
-            lightbox.style.display = 'none';
-        }
-    </script>
+function closeLightbox() {
+    lightbox.style.display = 'none';
+}
+</script>
 
 </body>
 </html>
